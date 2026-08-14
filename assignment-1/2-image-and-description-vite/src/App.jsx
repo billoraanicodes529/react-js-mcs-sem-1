@@ -1,11 +1,11 @@
 import React from "react"
-import './App.css';
+import ImageDescription from "./components/image-and-description"
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World!</p>
-      <p>Hope you are having a good day mate!</p>
+      <ImageDescription />
     </div>
   )
 }

@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 
-.App {
+p {
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "New Rocker", system-ui;
 }
-
-

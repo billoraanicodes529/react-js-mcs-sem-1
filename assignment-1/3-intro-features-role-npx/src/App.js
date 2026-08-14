@@ -1,13 +1,13 @@
 import React from "react"
 import './App.css';
+import FilmDetails from "./components/film-details";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello World!</p>
-      <p>Hope you are having a good day mate!</p>
+      <FilmDetails/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
