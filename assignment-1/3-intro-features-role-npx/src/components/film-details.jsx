@@ -17,8 +17,16 @@ const FilmDetails = () => {
     ];
 
     return (
-        filmDetailObjects 
-        // To be continued later on... 
+        <div>
+            {filmDetailObjects.map((section, index) => {
+                return (
+                    <div key={index}>
+                        <h2>{section.title}</h2>
+                        <p>{section.content}</p>
+                    </div>
+                )
+            })}
+        </div>
     );
 }
 

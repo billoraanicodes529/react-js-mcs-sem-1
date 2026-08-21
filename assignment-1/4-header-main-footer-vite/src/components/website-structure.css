@@ -1,0 +1,28 @@
+.grid-main-box {
+    height: 96vh;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px 1fr 80px;
+    gap: 2px;
+}
+
+.grid-item {
+    background-color: greenyellow;
+    border: 3px solid black;
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
