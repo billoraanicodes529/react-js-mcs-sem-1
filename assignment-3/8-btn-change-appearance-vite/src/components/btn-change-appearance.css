@@ -1,0 +1,7 @@
+.toggleLikeBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
