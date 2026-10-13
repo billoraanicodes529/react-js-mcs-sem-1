@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Play-Regular";
+  src: url("./Play/Play-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Play-Bold";
+  src: url("./Play/Play-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ddbea9;
+  font-family: "Play-Regular", sans-serif;
+}
+
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.tic-tac-toe h1 {
+  margin-bottom: 10px;
+  font-family: "Play-Bold", sans-serif;
+}
+
+#status {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #ffe8d6;
+  border: 2px solid #896c59;
+  border-radius: 10px;
+  font-family: "Play-Bold", sans-serif;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover:not(:disabled) {
+  background-color: #e9d1b0;
+}
+
+.cell:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.cell.winning {
+  background-color: #cb997e;
+}
+
+#resetBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #c1b4a9;
+  border: none;
+  border-radius: 10px;
+  font-family: "Play-Bold", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#resetBtn:hover {
+  background-color: #b2a397;
+}
+
+#resetBtn:focus-visible,
+.cell:focus-visible {
+  outline: 3px solid #5c4033;
+  outline-offset: 3px;
+}
+
+@media (max-width: 380px) {
+  .board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+  }
+
+  .cell {
+    min-width: 0;
+    min-height: 0;
+    font-size: 1.75rem;
+  }
+}

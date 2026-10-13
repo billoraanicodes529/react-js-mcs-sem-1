@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FlightBooking = () => {
   // 1. Hooks must be declared inside the component function
@@ -13,7 +13,9 @@ const FlightBooking = () => {
     } else if (returnDate < departure) {
       setMessage("Return date must be after departure date.");
     } else {
-      setMessage(`Flight booked! Departure: ${departure}, Return: ${returnDate}`);
+      setMessage(
+        `Flight booked! Departure: ${departure}, Return: ${returnDate}`,
+      );
     }
   };
 
@@ -41,12 +43,9 @@ const FlightBooking = () => {
       </div>
       <hr />
       <div>
-        {/* The function is now properly linked here */}
         <button onClick={handleBooking}>Book Flight</button>
         {message && (
-          <div style={{ color: "red", marginTop: "10px" }}>
-            {message}
-          </div>
+          <div style={{ color: "red", marginTop: "10px" }}>{message}</div>
         )}
       </div>
       <hr />

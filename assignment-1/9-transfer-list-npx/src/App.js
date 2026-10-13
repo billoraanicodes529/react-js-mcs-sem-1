@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TransferList from "./components/transfer-list";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <TransferList />
     </div>
   );
 }

@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import ToDoList from "./components/to-do-list";
 
 function App() {
-
   return (
-    <div className='App'>
-     
+    <div className="App">
+      <ToDoList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

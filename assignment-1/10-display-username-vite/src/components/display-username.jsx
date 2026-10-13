@@ -1,29 +1,32 @@
 import React from "react";
 import { useState } from "react";
-import "./display-username.css"
+import "./display-username.css";
 
-function DisplayUserName () {
-    const [username, setUserName] = useState("");
+function DisplayUserName() {
+  const [username, setUserName] = useState("");
 
-    return (
-        <div>
-            <form>
-                <label htmlFor="nameInput">Enter Your Name: </label>
-                <input type="text" 
-                id="nameInput"
-                placeholder="Enter Name Here..."
-                value={username}
-                onChange={(e) => {
-                    setUserName(e.target.value);
-                }}
-                />
-            </form>
+  return (
+    <div>
+      <form>
+        <label htmlFor="nameInput">Enter Your Name: </label>
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Enter Name Here..."
+          value={username}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
+      </form>
 
-            <br /><hr /><br />
+      <br />
+      <hr />
+      <br />
 
-            <h1>{username}</h1>
-        </div>
-    )
+      <h1>Welcome {username}</h1>
+    </div>
+  );
 }
 
 export default DisplayUserName;

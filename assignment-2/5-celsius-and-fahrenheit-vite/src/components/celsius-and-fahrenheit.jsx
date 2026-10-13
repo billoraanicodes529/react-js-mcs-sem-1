@@ -32,41 +32,28 @@ function CelsiusAndFahrenheit() {
   return (
     <div>
       <h3>Temperature Converter</h3>
-
       <hr />
-
       <h3>Celsius to Fahrenheit</h3>
-
       <input
         type="number"
         placeholder="Enter Celsius Value..."
         value={celsius}
         onChange={(e) => setCelsius(e.target.value)}
       />
-        &emsp;
-      <button onClick={convertToFahrenheit}>
-        Convert Fah.
-      </button>
-
+      &emsp;
+      <button onClick={convertToFahrenheit}>Convert Fah.</button>
       <p>Fahrenheit: {fahrenheit}</p>
-
       <hr />
-
       <h3>Fahrenheit to Celsius</h3>
-
       <input
         type="number"
         placeholder="Enter Fahrenheit Value..."
         value={fahrenheit}
         onChange={(e) => setFahrenheit(e.target.value)}
       />
-        &emsp;
-      <button onClick={convertToCelsius}>
-        Convert Cel.
-      </button>
-
+      &emsp;
+      <button onClick={convertToCelsius}>Convert Cel.</button>
       <p>Celsius: {celsius}</p>
-
       <hr />
     </div>
   );
